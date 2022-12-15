@@ -47,7 +47,7 @@ const JobDetails = (props) => {
 
         {/* Right (Stipend) */}
         <div className="col-2 text-center mt-5">
-          <div className="typeTxt h6 mb-3">{props.type}</div>
+          <div className="typeTxt h6 mb-3">{props.type === 'Internship' ? 'Stipend' : 'Salary'}</div>
           <div className="moneyTxt h6">₹ {props.amount}</div>
         </div>
 
