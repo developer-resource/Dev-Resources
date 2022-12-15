@@ -20,7 +20,7 @@ const JobCard = () => {
     setData(result);
   };
 
-  console.log(data)
+  // console.log(data)
   
 
 
@@ -28,7 +28,7 @@ const JobCard = () => {
   return (
     <div className="container jobContainer">
       {data.map((val, index) => {
-       return  <JobDetails duration={val.duration} experience={val.experience} desc={val.jobDescription} startDate={val.startDate}  portalLink={val.portalLink} key={val._id} tags={val.tags} type={val.type} logo={val.profileImg} amount={val.expectedSalary} jobRole={val.jobTitle} companyName={val.companyName} location={val.location} />
+       return  <JobDetails batch={val.batch} duration={val.duration} experience={val.experience} desc={val.jobDescription} startDate={val.startDate}  portalLink={val.portalLink} key={val._id} tags={val.tags} type={val.type} logo={val.profileImg} amount={val.expectedSalary} jobRole={val.jobTitle} companyName={val.companyName} location={val.location} />
       })}
 
 

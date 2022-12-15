@@ -78,14 +78,14 @@ const JobDetails = (props) => {
         </div>
 
         {/* Show More Div */}
-        <div className="row mt-5 showMore" style={{display: more ? 'block' : 'none'}}>
+        <div className="row mt-5 showDiv" style={{display: more ? 'block' : 'none'}}>
           <div className='col-12'>
             <div className="h6 mb-4 fw-bold">Type : <span className='fw-light'>{props.type}</span></div>
             <div className="h6 mb-4 fw-bold">Start Date : <span className='fw-light'>{props.startDate}</span></div>
             <div className="h6 mb-4 fw-bold">Duration : <span className='fw-light'>{props.duration}</span></div>
+            <div className="h6 mb-4 fw-bold">Batch : <span className='fw-light'>{props.batch}</span></div>
             <div className="h6 mb-4 fw-bold">Experience : <span className='fw-light'>{props.experience}</span></div>
-            <div className="h6 mb-4 fw-bold">Batch : <span className='fw-light'>{props.jobRole}</span></div>
-            <div className="h6 mb-4 fw-bold">Application Close Date : <span className='fw-light'>{props.jobRole}</span></div>
+            {/* <div className="h6 mb-4 fw-bold">Application Close Date : <span className='fw-light'>{props.jobRole}</span></div>   (! IMPORTANT)  */}
             <div className="h6 mb-4 fw-bold text-center">Description</div>
             <p>{props.desc}</p>
           </div>
