@@ -1,0 +1,32 @@
+.tabContainer {
+    border-radius: 8px;
+    box-shadow: var(--boxShadow);
+}
+
+.tabIcon {
+    min-height: 90vh !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.iconTab{
+    width: 25px;
+    height: 25px;
+}
+
+
+.tabTxt {
+    text-decoration: none;
+    color: var(--txtPrimary);
+    font-size: .8rem;
+}
+
+.tabTxt:hover{
+    color: var(--txtPrimary);
+}
+
+.tabLink:hover{
+    cursor: pointer;
+}

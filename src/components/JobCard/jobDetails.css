@@ -1,0 +1,121 @@
+.jobDiv {
+    box-shadow: var(--boxShadow);
+    border-radius: 8px;
+}
+
+.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.companyLogo {
+    width: 70px;
+    /* height: 50px; */
+}
+
+.companyName,
+.companyLocation {
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: .7rem;
+    color: var(--txtSecondary);
+}
+
+.companyName {
+    font-size: .8rem;
+}
+
+
+.jobRole {
+    color: black;
+    font-weight: 600;
+    color: var(--txtPrimary);
+    min-width: 20vw;
+}
+
+
+
+
+.typeTxt {
+    text-transform: capitalize;
+    font-weight: 600;
+    color: var(--txtPrimary);
+    letter-spacing: .5px;
+}
+
+
+.moneyTxt {
+    margin-top: 9px;
+    font-weight: 600;
+    color: var(--txtSecondary);
+}
+
+
+.techTags {
+    text-transform: uppercase;
+    /* padding: .1rem 1.5rem; */
+    text-transform: capitalize;
+    background-color: #ededed;
+    border-radius: 50px;
+    font-size: .7rem;
+    font-weight: 600;
+    color: var(--txtSecondary);
+
+}
+
+
+.moreDiv {
+    border-top: .2px solid rgb(225, 225, 225);
+}
+
+
+
+
+.showMore {
+    font-size: 0.75rem;
+    border: none;
+    background-color: transparent;
+    font-weight: 600;
+    color: var(--txtSecondary);
+}
+
+
+.applyNow,
+.status {
+    font-size: 0.8rem;
+    font-weight: 600;
+    background-color: var(--primary);
+    border: none;
+    color: white;
+    border-radius: 50px;
+    padding: .3rem 1rem;
+    transition: .3s;
+}
+
+.applyNow:hover {
+    transition: .3s;
+    background-color: var(--transition);
+}
+
+
+.status {
+    background-color: var(--txtSecondary);
+    border-radius: 8px;
+}
+
+
+
+/* Save Icon */
+
+.saveIcon {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.saveDiv {
+    margin-top: -.8rem;
+
+}
+
