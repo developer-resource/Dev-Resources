@@ -53,10 +53,10 @@ const JobDetails = (props) => {
 
 
         {/* Tech Tags */}
-        <div className="row ps-5 mt-4 ">
+        <div className="row ps-5 mt-4 w-75">
           {props.tags.map((val, index) => {
             return (
-              <div className={`col-3 text-center d-flex `}>
+              <div className={`col-4 text-center d-flex `}>
                 <div key={index} className="techTags mt-4 px-3 py-2 ms-3 d-flex flex-column justify-content-center">{val}</div>
               </div>
             )
