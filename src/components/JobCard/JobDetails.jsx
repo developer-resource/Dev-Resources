@@ -53,14 +53,14 @@ const JobDetails = (props) => {
 
 
         {/* Tech Tags */}
-        <div className="row ps-5 mt-4">
-          <div className="col-12">
-            <div className="col-1 text-center d-flex">
-              {props.tags.map((val, index) => {
-                return <div key={index} className="techTags px-4 py-1 ms-3 d-flex flex-column justify-content-center">{val}</div>
-              })}
-            </div>
-          </div>
+        <div className="row ps-5 mt-4 ">
+          {props.tags.map((val, index) => {
+            return (
+              <div className={`col-3 text-center d-flex `}>
+                <div key={index} className="techTags mt-4 px-3 py-2 ms-3 d-flex flex-column justify-content-center">{val}</div>
+              </div>
+            )
+          })}
         </div>
 
 
@@ -70,7 +70,7 @@ const JobDetails = (props) => {
             <button className='status'>Applied</button>
           </div>
           <div className="col-4 my-auto">
-            <button className='showMore' onClick={()=>setMore(!more)}>Show {more ? 'Less' : 'More'}{more ? <i className="ms-1 fa-solid fa-angle-up"></i> : <i className="ms-1 fa-solid fa-angle-down"></i>} </button>
+            <button className='showMore' onClick={() => setMore(!more)}>Show {more ? 'Less' : 'More'}{more ? <i className="ms-1 fa-solid fa-angle-up"></i> : <i className="ms-1 fa-solid fa-angle-down"></i>} </button>
           </div>
           <div className="col-4 text-end">
             <button className='applyNow' onClick={() => window.open(props.portalLink, '_blank')}>Apply Now</button>
@@ -78,7 +78,7 @@ const JobDetails = (props) => {
         </div>
 
         {/* Show More Div */}
-        <div className="row mt-5 showDiv" style={{display: more ? 'block' : 'none'}}>
+        <div className="row mt-5 showDiv" style={{ display: more ? 'block' : 'none' }}>
           <div className='col-12'>
             <div className="h6 mb-4 fw-bold">Type : <span className='fw-light'>{props.type}</span></div>
             <div className="h6 mb-4 fw-bold">Start Date : <span className='fw-light'>{props.startDate}</span></div>

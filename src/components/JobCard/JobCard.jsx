@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import JobDetails from './JobDetails'
 import './jobCard.css'
+
 const JobCard = () => {
 
   const [data, setData] = useState([])
+
+
 
   useEffect(() => {
     getData();
@@ -20,19 +23,18 @@ const JobCard = () => {
     setData(result);
   };
 
-  // console.log(data)
-  
+
+  console.log(data)
 
 
 
   return (
-    <div className="container jobContainer">
-      {data.map((val, index) => {
-       return  <JobDetails batch={val.batch} duration={val.duration} experience={val.experience} desc={val.jobDescription} startDate={val.startDate}  portalLink={val.portalLink} key={val._id} tags={val.tags} type={val.type} logo={val.profileImg} amount={val.expectedSalary} jobRole={val.jobTitle} companyName={val.companyName} location={val.location} />
-      })}
+      <div className="container jobContainer">
+        {data.map((val, index) => {
+          return <JobDetails batch={val.batch} duration={val.duration} experience={val.experience} desc={val.jobDescription} startDate={val.startDate} portalLink={val.portalLink} key={val._id} tags={val.tags} type={val.type} logo={val.profileImg} amount={val.expectedSalary} jobRole={val.jobTitle} companyName={val.companyName} location={val.location} />
+        })}
+      </div>
 
-
-    </div>
   )
 }
 
