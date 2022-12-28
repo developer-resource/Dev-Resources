@@ -14,7 +14,7 @@
 
 ## Authors
 
-- [@TheGaurav](https://github.com/TheGaurav123)
+- [@Akash Gaurav](https://github.com/TheGaurav123)
 - [@Ayushi](https://github.com/)
 - [@Aman ](https://github.com/Lord-Aman)
 - [@Abhishek Rawe](https://github.com/abhishekrawe)
