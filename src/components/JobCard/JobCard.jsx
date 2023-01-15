@@ -15,7 +15,7 @@ const JobCard = () => {
   // Get Data
   const getData = async () => {
     let result = await fetch(
-      "https://admin-panel-backend-production.up.railway.app/api/jobs"
+      "https://dev-resources-backend.onrender.com/api/jobs"
     );
 
     result = await result.json();
