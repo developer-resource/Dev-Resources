@@ -3,7 +3,7 @@ import Tab from '../Tab/Tab'
 import JobCard from '../JobCard/JobCard'
 import Filter from '../Filter/Filter'
 import './container.css'
-const Container = () => {
+const Container = ({searchText}) => {
     return (
         <div className="container-fluid mt-3 parentContainer">
             <div className="row">
@@ -11,7 +11,7 @@ const Container = () => {
                     <Tab />
                 </div>
                 <div className="col-8">
-                    <JobCard />
+                    <JobCard searchText={searchText} />
                 </div>
                 <div className="col-2">
                     <Filter />

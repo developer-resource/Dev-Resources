@@ -1,16 +1,22 @@
-import React, { useState, useEffect } from 'react'
-import JobDetails from './JobDetails'
-import './jobCard.css'
+import React, { useState, useEffect } from "react";
+import JobDetails from "./JobDetails";
+import "./jobCard.css";
 
-const JobCard = () => {
-
-  const [data, setData] = useState([])
-
-
+const JobCard = ({ searchText }) => {
+  const [data, setData] = useState([]);
+  const [jobs,setJobs] = useState([])
 
   useEffect(() => {
     getData();
   }, []);
+
+  useEffect(() => {
+    const jobItems = jobs;
+    const filteredData = jobItems.filter((item) =>
+      item.jobTitle.toLowerCase().includes(searchText.toLowerCase())
+    );
+    setData(filteredData);
+  }, [searchText]);
 
   // Get Data
   const getData = async () => {
@@ -19,23 +25,38 @@ const JobCard = () => {
     );
 
     result = await result.json();
-
+    setJobs(result)
     setData(result);
   };
 
-
-  console.log(data)
-
-
-
   return (
-      <div className="container jobContainer">
-        {data.map((val, index) => {
-          return <JobDetails batch={val.batch} duration={val.duration} experience={val.experience} desc={val.jobDescription} startDate={val.startDate} portalLink={val.portalLink} key={val._id} tags={val.tags} type={val.type} logo={val.profileImg} amount={val.expectedSalary} jobRole={val.jobTitle} companyName={val.companyName} location={val.location} />
-        })}
-      </div>
+    <div className="container jobContainer">
+      {data.length > 0 ? (
+        data.map((val, index) => {
+          return (
+            <JobDetails
+              batch={val.batch}
+              duration={val.duration}
+              experience={val.experience}
+              desc={val.jobDescription}
+              startDate={val.startDate}
+              portalLink={val.portalLink}
+              key={index.toString()}
+              tags={val.tags}
+              type={val.type}
+              logo={val.profileImg}
+              amount={val.expectedSalary}
+              jobRole={val.jobTitle}
+              companyName={val.companyName}
+              location={val.location}
+            />
+          );
+        })
+      ) : (
+        <h2>No Jobs Found</h2>
+      )}
+    </div>
+  );
+};
 
-  )
-}
-
-export default JobCard
+export default JobCard;
