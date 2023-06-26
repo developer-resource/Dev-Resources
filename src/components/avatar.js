@@ -2,8 +2,8 @@ import { useAuth0 } from '@auth0/auth0-react'
 import React from 'react'
 
 const Avatar = () => {
-  const {user} = useAuth0()
-
+  const { user } = useAuth0()
+  console.log(user)
   return (
     <div>
       <img
