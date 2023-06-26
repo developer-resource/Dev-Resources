@@ -20,7 +20,7 @@ const HomeProvider = ({ children }) => {
                 alert('Unable To Fetch Data...')
                 setState({ ...state, loading: false })
             })
-    }, [state])
+    }, []) //eslint-disable-line
 
     return (
         <HomeContext.Provider value={{
