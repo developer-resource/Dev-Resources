@@ -1,76 +1,70 @@
+# Getting Started with Create React App
 
-# Developer Resources
-<img src='https://developerresource.netlify.app/static/media/drLogo.24c5a5b132c03ccfbd23.png' width='150' height='150' />
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-* Developer Resources is like a angel for the developers like us. 
+## Available Scripts
 
-* If someone is hustling while learning their favorite tech stack then, Developer Resources 
-  help those people to learn and clear their doubts.
+In the project directory, you can run:
 
-* Also it's provide the desired Job/Internship through the various platforms.
+### `npm start`
 
-* Also something great is in the pipeline so wait...
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## Authors
+### `npm test`
 
-- [@Akash Gaurav](https://github.com/TheGaurav123)
-- [@Ayushi](https://github.com/)
-- [@Aman ](https://github.com/Lord-Aman)
-- [@Abhishek Rawe](https://github.com/abhishekrawe)
-- [@Priya](https://github.com/priya0220)
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+### `npm run build`
 
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## Features
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-- Job/Internships Listing
-- Community Chat Support
-- Roadmaps For Learning
+### `npm run eject`
 
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-## Demo
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-https://developerresource.netlify.app/
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-## Run Locally
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-Clone the project
+## Learn More
 
-```bash
-  git clone https://github.com/TheGaurav123/developerResource.git
-```
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-Go to the project directory
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-```bash
-  cd my-project
-```
+### Code Splitting
 
-Install dependencies
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-```bash
-  npm install
-```
+### Analyzing the Bundle Size
 
-Start the server
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-```bash
-  npm start
-```
+### Making a Progressive Web App
 
-## Screenshots
-![App Screenshot](https://raw.githubusercontent.com/TheGaurav123/developerResource/main/src/drPic.jpeg)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-## Tech Stack
+### Advanced Configuration
 
-**Client:** React, JavaScript, Bootstrap, CSS
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-**Design Tools:** Figma, Canva
+### Deployment
 
-**Server:** Node, Express
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-**DB:** MongoDB
+### `npm run build` fails to minify
 
-
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
