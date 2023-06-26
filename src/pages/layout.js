@@ -40,7 +40,7 @@ const Layout = () => {
                 </header>
 
                 {/* Content */}
-                <main className="flex-grow mt-10 md:mt-20">
+                <main className="flex-grow mt-20 md:mt-24">
                     <Routes>
                         <Route path='/' element={<Protected component={HomePage} />} />
                     </Routes>
