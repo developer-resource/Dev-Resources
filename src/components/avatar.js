@@ -9,7 +9,7 @@ const Avatar = () => {
       <img
         className='rounded-full cursor-pointer h-9 md:h-12 dark:bg-white'
         alt='User Icon'
-        src={user?.picture ? user.picture : 'https://cdn.icon-icons.com/icons2/3446/PNG/512/account_profile_user_avatar_icon_219236.png'} />
+        src={user?.picture ? user.picture : 'https://cdn.iconscout.com/icon/free/png-256/free-avatar-370-456322.png?f=webp'} />
     </div>
   )
 }
