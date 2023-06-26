@@ -3,7 +3,7 @@ import Layout from "./pages/layout";
 
 function App() {
   const { user, isAuthenticated, isLoading } = useAuth0();
-console.log(user)
+  
   return (
     <Auth0Provider
       domain={process.env.REACT_APP_AUTH0_DOMAIN}
