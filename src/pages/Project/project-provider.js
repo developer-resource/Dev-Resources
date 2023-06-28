@@ -9,7 +9,7 @@ const ProjectProvider = ({ children }) => {
 
     const [state, setState] = useState({
         pageData: [],
-        loading: false
+        loading: true
     })
 
     useEffect(() => {
