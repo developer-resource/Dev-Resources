@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from 'react'
+import React, { createContext, useState } from 'react'
 import Loader from '../../components/loader'
 import BlankPage from '../../components/blankPage'
 
@@ -6,7 +6,7 @@ const CardDetailsContext = createContext(null)
 
 const CardDetailsProvider = ({ children }) => {
 
-    const [state, setState] = useState({
+    const [state, setState] = useState({ //eslint-disable-line
         pageData: ['Hello'],
         loading: false
     })
