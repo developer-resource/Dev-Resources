@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import { BsPin } from 'react-icons/bs'
 // import { AiFillCheckCircle } from 'react-icons/ai'
 import { HomeContext } from '../pages/Home/home-provider'
-import { Link } from 'react-router-dom'
 
 const JobCard = ({ values }) => {
     const {
@@ -14,7 +13,7 @@ const JobCard = ({ values }) => {
         // logo,
         applyLink
     } = values
-    
+
     return (
         <div className='text-black cursor-pointer hover:scale-105 transition-all duration-500 rounded-lg dark:text-white p-6 bg-white shadow-md dark:bg-[rgba(255,255,255,.1)]'>
             {/* <p><AiFillCheckCircle color='green' size={40} /></p> */}
