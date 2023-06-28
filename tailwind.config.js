@@ -15,7 +15,12 @@ module.exports = {
     extend: {
       colors: {
         primary: colors.PRIMARY,
-        border: colors.BORDER
+        primaryDark: colors.DARK_PRIMARY,
+        primaryHover: colors.PRIMARY_HOVER,
+        primaryDarkHover: colors.DARK_PRIMARY_HOVER,
+        border: colors.BORDER,
+        colorText: 'black',
+        colorTextDark: 'white'
       }
     },
     plugins: [],
