@@ -1,26 +1,27 @@
 import React, { createContext, useEffect, useState } from 'react'
 import Loader from '../../components/loader'
 import BlankPage from '../../components/blankPage'
+import { getProjects } from '../../api/project-page-api'
 
 const ProjectContext = createContext(null)
 
 const ProjectProvider = ({ children }) => {
 
     const [state, setState] = useState({
-        pageData: ['Hello'],
+        pageData: [],
         loading: false
     })
 
-    // useEffect(() => {
-    //     fetchHomeData()
-    //         .then((res) => {
-    //             setState({ ...state, pageData: res?.data, loading: false })
-    //         })
-    //         .catch((err) => {
-    //             alert('Unable To Fetch Data...')
-    //             setState({ ...state, loading: false })
-    //         })
-    // }, []) //eslint-disable-line
+    useEffect(() => {
+        getProjects()
+            .then((res) => {
+                setState({ ...state, pageData: res?.data, loading: false })
+            })
+            .catch((err) => {
+                console.warn('Unable To Fetch Data...')
+                setState({ ...state, loading: false })
+            })
+    }, []) //eslint-disable-line
 
     return (
         <ProjectContext.Provider value={{
