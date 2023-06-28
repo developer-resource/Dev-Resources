@@ -14,7 +14,7 @@ const JobCard = ({ values }) => {
         // logo,
         applyLink
     } = values
-
+    
     return (
         <div className='text-black cursor-pointer hover:scale-105 transition-all duration-500 rounded-lg dark:text-white p-6 bg-white shadow-md dark:bg-[rgba(255,255,255,.1)]'>
             {/* <p><AiFillCheckCircle color='green' size={40} /></p> */}
@@ -38,7 +38,7 @@ const JobCard = ({ values }) => {
             </div>
 
             <div className='flex justify-between'>
-                <Link to={applyLink} target='_blank' className='text-white decoration-transparent flex items-center h-9 mt-2 hover:bg-indigo-700 bg-indigo-600  px-5 py-1 font-semibold  rounded-full text-sm'>Apply Now</Link>
+                <button onClick={() => window.open(applyLink, '_blank')} className='text-white decoration-transparent h-9 mt-2 hover:bg-indigo-700 bg-indigo-600  px-5 py-1 font-semibold  rounded-full text-sm'>Apply Now</button>
                 <div>
                     <p className='text-end text-sm font-bold'>Stipend</p>
                     <p className='text-end'>{amount}</p>
