@@ -3,7 +3,7 @@ import React from 'react'
 
 const Avatar = () => {
   const { user } = useAuth0()
-  console.log(user)
+  
   return (
     <div>
       <img

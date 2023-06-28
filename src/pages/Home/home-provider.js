@@ -1,6 +1,7 @@
 import React, { createContext, useEffect, useState } from 'react'
 import { fetchHomeData } from '../../api/home-api'
 import Loader from '../../components/loader'
+import BlankPage from '../../components/blankPage'
 
 const HomeContext = createContext(null)
 
@@ -26,7 +27,7 @@ const HomeProvider = ({ children }) => {
         <HomeContext.Provider value={{
             pageData: state?.pageData
         }}>
-            {state?.loading ? <Loader /> : children}
+            {state?.loading ? <Loader /> : (state?.pageData.length === 0 ? <BlankPage /> : children)}
         </HomeContext.Provider>
     )
 }

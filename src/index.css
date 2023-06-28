@@ -13,3 +13,21 @@
     font-family: 'poppinsBold';
     src: url('./assets/fonts/Poppins-Bold.ttf');
 }
+
+/* Hide the scrollbar for all elements */
+::-webkit-scrollbar {
+    width: 0.3rem;
+    height: 0.3rem;
+  }
+  
+  
+  /* Optional: Style the track (the area behind the thumb) */
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  
+  /* Optional: Style the scrollbar thumb */
+  ::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 50px;
+  }

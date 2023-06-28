@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { BiSolidToggleLeft, BiSolidToggleRight } from 'react-icons/bi'
-import { getThemeMode } from '../utils/helper'
 import { useAuth0 } from '@auth0/auth0-react'
 
-const Menu = ({ handleThemeSwitch }) => {
+const Menu = () => {
     const [menu, setMenu] = useState(false)
     const { isAuthenticated, logout } = useAuth0();
 
@@ -21,7 +19,7 @@ const Menu = ({ handleThemeSwitch }) => {
                         ?
                         <>
                             <NavLink className={menuClass} to='/'>Home</NavLink>
-                            <NavLink className={menuClass} to='/roadmap'>Roadmap</NavLink>
+                            <NavLink className={menuClass} to='/projects'>Projects</NavLink>
                             <NavLink className={menuClass} to='/saved'>Saved</NavLink>
                             <NavLink className={menuClass} to='/chat'>Chat</NavLink>
 
@@ -30,18 +28,6 @@ const Menu = ({ handleThemeSwitch }) => {
                         :
                         null
                     }
-
-                    {getThemeMode() === 'dark'
-                        ?
-                        <BiSolidToggleRight
-                            onClick={handleThemeSwitch}
-                            className='mt-5 cursor-pointer'
-                            size={45} />
-                        :
-                        <BiSolidToggleLeft
-                            onClick={handleThemeSwitch}
-                            className='mt-5 cursor-pointer'
-                            size={45} />}
                 </div>
                 : null}
         </div >
