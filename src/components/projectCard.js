@@ -4,8 +4,8 @@ const ProjectCard = ({ values }) => {
     const {
         thumbnail,
         title,
-        keywords,
-        description
+        // keywords,
+        // description
     } = values
     return (
         <div className='text-black w-screen md:w-8/12 lg:w-1/4 flex flex-col gap-8 pb-5 overflow-hidden duration-500 rounded-lg dark:text-white bg-white shadow-md dark:bg-[rgba(255,255,255,.1)]' >
