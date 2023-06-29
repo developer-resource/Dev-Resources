@@ -34,7 +34,7 @@ const Layout = () => {
     }, [theme])
 
     return (
-        <div className="flex flex-col h-screen bg-white dark:bg-black transition-all duration-1000 font-fonts">
+        <div className="flex flex-col h-screen bg-white dark:bg-gray-900 transition-all duration-1000 font-fonts">
 
             <BrowserRouter>
                 {/* Header */}

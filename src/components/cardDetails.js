@@ -6,76 +6,91 @@ import { MdAttachMoney } from 'react-icons/md'
 import { BsInfoCircle } from 'react-icons/bs'
 import { BiTimeFive } from 'react-icons/bi'
 import { LuSchool2 } from 'react-icons/lu'
-const CardDetailsComponent = ({ duration, startDate, batch }) => {
+const CardDetailsComponent = ({ duration = 10, startDate = 10, batch = 10 }) => {
 
     return (
         <div className='dark:text-colorTextDark p-4 w-screen text-colorText '>
             {/* Heading */}
             <section className='text-center flex justify-center items-center md:mt-5'>
-                <div className='flex gap-3 items-center justify-center'>
+                <div className='flex gap-10 items-center flex-col justify-center'>
                     <img
-                        className='h-8 rounded-full w-8 item object-contain'
-                        src='https://media.trustradius.com/product-logos/yt/ts/FDEIEPKPT8K5.JPEG' alt='organizationLogo' />
-                    <p className='text-2xl'>Spenza Pvt Ltd.</p>
+                        className='h-32 rounded w-3h-32 overflow-hidden item object-contain'
+                        src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png' alt='organizationLogo' />
+                    {/* <p className='text-2xl'>Spenza Pvt Ltd.</p> */}
+                    <h1 className='text-7xl font-extrabold text-gray-600 dark:text-gray-200'>Meta Pvt. Ltd</h1>
                 </div>
             </section>
 
             {/* Card Content */}
-            <section className='text-md justify-evenly lg:text-xl dark:bg-black dark:shadow-[rgba(129,129,129,.2)] bg-white shadow-xl p-3 lg:p-10 rounded flex flex-col gap-10 mt-16 '>
-                <div className='flex'>
-                    <span className='font-bold flex items-center'><LiaLaptopCodeSolid size={30} className='me-2' /> Job Type -</span>
-                    <span className='ms-2'>Internship</span>
-                </div>
+            <section className='text-md justify-evenly lg:text-2xl shadow-xl p-3 lg:p-10 rounded flex flex-col gap-10 mt-16 '>
 
-                <div className='flex'>
-                    <span className='font-bold flex items-center'><VscLocation size={30} className='me-2' /> Location -</span>
-                    <span className='ms-2'>Siwan, USA</span>
-                </div>
+                <div className='flex justify-between'>
+                    <div className='flex flex-col gap-12 w-[60%]'>
+                        <div className='flex'>
+                            <span className='font-bold flex items-center'><LiaLaptopCodeSolid size={30} className='me-2' /> Job Type -</span>
+                            <span className='ms-2'>Internship</span>
+                        </div>
 
-                <div className='flex'>
-                    <div className='flex gap-2 flex-wrap'>
-                        <span className='font-bold flex items-center'><AiOutlineBulb size={30} className='me-2' /> Skills -</span>
+                        <div className='flex'>
+                            <span className='font-bold flex items-center'><VscLocation size={30} className='me-2' /> Location -</span>
+                            <span className='ms-2'>Siwan, USA</span>
+                        </div>
 
-                        {/* Skills */}
-                        <span>JavaScript</span>
-                        <span>React.js</span>
-                        <span>Webpack</span>
-                        <span>Tailwind CSS</span>
-                        <span>Slack</span>
+                        <div className='flex'>
+                            <div className='flex gap-2 flex-wrap items-start w-[80%]'>
+
+                                {/* Skills */}
+                                <span className='font-bold flex items-center'><AiOutlineBulb size={30} className='me-2' /> Skills -</span>
+                                <div className='flex w-[80%] gap-8 flex-wrap'>
+                                    <span className='rounded-full border border-gray-600 text-gray-600 dark:border-none dark:bg-gray-600  text-[1rem] dark:text-gray-300 px-4 py-1 font-semibold '>JavaScript</span>
+                                    <span className='rounded-full border border-gray-600 text-gray-600 dark:border-none dark:bg-gray-600  text-[1rem] dark:text-gray-300 px-4 py-1 font-semibold '>React.js</span>
+                                    <span className='rounded-full border border-gray-600 text-gray-600 dark:border-none dark:bg-gray-600  text-[1rem] dark:text-gray-300 px-4 py-1 font-semibold '>Webpack</span>
+                                    <span className='rounded-full border border-gray-600 text-gray-600 dark:border-none dark:bg-gray-600  text-[1rem] dark:text-gray-300 px-4 py-1 font-semibold '>Tailwind CSS</span>
+                                    <span className='rounded-full border border-gray-600 text-gray-600 dark:border-none dark:bg-gray-600  text-[1rem] dark:text-gray-300 px-4 py-1 font-semibold '>Slack</span>
+                                    <span className='rounded-full border border-gray-600 text-gray-600 dark:border-none dark:bg-gray-600  text-[1rem] dark:text-gray-300 px-4 py-1 font-semibold '>Slack</span>
+                                    <span className='rounded-full border border-gray-600 text-gray-600 dark:border-none dark:bg-gray-600  text-[1rem] dark:text-gray-300 px-4 py-1 font-semibold '>Python</span>
+                                    <span className='rounded-full border border-gray-600 text-gray-600 dark:border-none dark:bg-gray-600  text-[1rem] dark:text-gray-300 px-4 py-1 font-semibold '>Scikit Learn</span>
+                                    <span className='rounded-full border border-gray-600 text-gray-600 dark:border-none dark:bg-gray-600  text-[1rem] dark:text-gray-300 px-4 py-1 font-semibold '>Clickup</span>
+                                    <span className='rounded-full border border-gray-600 text-gray-600 dark:border-none dark:bg-gray-600  text-[1rem] dark:text-gray-300 px-4 py-1 font-semibold '>JavaScript</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div className='flex'>
+                            <span className='font-bold flex items-center'><MdAttachMoney size={30} className='me-2' /> Stipend -</span>
+                            <span className='ms-2'>$2150</span>
+                        </div>
+                    </div>
+                    <div className='flex flex-col gap-12 w-[40%] text-start'>
+                        {duration &&
+                            <div className='flex'>
+                                <span className='font-bold flex items-center'><BiTimeFive size={30} className='me-2' /> Duration -</span>
+                                <span className='ms-2'>6 Months</span>
+                            </div>
+                        }
+
+                        {startDate &&
+                            <div className='flex'>
+                                <span className='font-bold flex items-center'><AiOutlineCalendar size={30} className='me-2' /> Start Date -</span>
+                                <span className='ms-2'>6 Months</span>
+                            </div>
+                        }
+
+                        {batch &&
+                            <div className='flex'>
+                                <span className='font-bold flex items-center'><LuSchool2 size={30} className='me-2' /> Batch -</span>
+                                <span className='ms-2'>2023,24,25</span>
+                            </div>
+                        }
                     </div>
                 </div>
-
-                <div className='flex'>
-                    <span className='font-bold flex items-center'><MdAttachMoney size={30} className='me-2' /> Stipend -</span>
-                    <span className='ms-2'>$2150</span>
-                </div>
-
-                {duration &&
-                    <div className='flex'>
-                        <span className='font-bold flex items-center'><BiTimeFive size={30} className='me-2' /> Duration -</span>
-                        <span className='ms-2'>6 Months</span>
-                    </div>
-                }
-
-                {startDate &&
-                    <div className='flex'>
-                        <span className='font-bold flex items-center'><AiOutlineCalendar size={30} className='me-2' /> Start Date -</span>
-                        <span className='ms-2'>6 Months</span>
-                    </div>
-                }
-
-                {batch &&
-                    <div className='flex'>
-                        <span className='font-bold flex items-center'><LuSchool2 size={30} className='me-2' /> Batch -</span>
-                        <span className='ms-2'>2023,24,25</span>
-                    </div>
-                }
 
                 <div>
                     <div>
                         <span className='font-bold flex mb-3 cursor-pointer underline'><BsInfoCircle size={30} className='me-2' /> About Job</span>
                     </div>
-                    <div className='h-40 overflow-scroll'>
+                    <div>
                         <p className='text-start'>
                             Company Overview:
 
