@@ -13,7 +13,6 @@ const JobCard = ({ values }) => {
         amount,
         logo,
         applyLink,
-        tags,
         id
     } = values
 
@@ -27,7 +26,7 @@ const JobCard = ({ values }) => {
                     <img
                         alt='organizationIcon'
                         className='h-10 w-10 rounded object-contain'
-                        src={logo ? logo : 'https://1000logos.net/wp-content/uploads/2021/10/logo-Meta.png'}
+                        src={logo ? logo : 'https://www.freeiconspng.com/thumbs/office-icon/office-icon--insharepics-11.png'}
                     />
 
                     <div className='flex flex-col gap-2'>
@@ -37,7 +36,7 @@ const JobCard = ({ values }) => {
                     </div>
                 </div>
                 <div className='text-end'>
-                    <BsPin className='cursor-pointer' size={20} />
+                    <BsPin className='cursor-pointer hover:scale-110 transition-all duration-300' size={20} />
                 </div>
             </div>
 
@@ -83,7 +82,6 @@ const JobCardWrapper = () => {
                                 amount: val?.expectedSalary,
                                 logo: val?.profileImg,
                                 applyLink: val?.portalLink,
-                                tags: val?.tags,
                                 id: val?._id
                             }}
                         />
