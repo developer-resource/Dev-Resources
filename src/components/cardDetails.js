@@ -30,7 +30,7 @@ const CardDetailsComponent = ({ values }) => {
             {/* Card Content */}
             <section className='text-md justify-evenly lg:text-2xl shadow-xl p-3 lg:p-10 rounded flex flex-col gap-10 mt-16 '>
 
-                <div className='flex justify-between'>
+                <div className='hidden md:flex justify-between'>
                     <div className='flex flex-col gap-12 w-[60%]'>
                         <div className='flex justify-start items-center'>
                             <span className='font-bold flex items-center'><MdOutlineWorkOutline size={30} className='me-2' /> Job Title -</span>
@@ -98,6 +98,68 @@ const CardDetailsComponent = ({ values }) => {
                                 <span className='ms-2'>{experience}</span>
                             </div>
                         }
+                    </div>
+                </div>
+
+                <div className='flex flex-col md:hidden gap-10 '>
+                    <div className='flex justify-start items-center'>
+                        <span className='font-bold flex items-center'><MdOutlineWorkOutline size={30} className='me-2' /> Job Title -</span>
+                        <span className='ms-2'>{jobTitle}</span>
+                    </div>
+
+                    <div className='flex justify-start items-center'>
+                        <span className='font-bold flex items-center'><LiaLaptopCodeSolid size={30} className='me-2' /> Type -</span>
+                        <span className='ms-2'>{type}</span>
+                    </div>
+
+                    <div className='flex justify-start items-center'>
+                        <span className='font-bold flex items-center'><VscLocation size={30} className='me-2' /> Location -</span>
+                        <span className='ms-2'>{location}</span>
+                    </div>
+
+                    {duration &&
+                        <div className='flex justify-start items-center'>
+                            <span className='font-bold flex items-center'><BiTimeFive size={30} className='me-2' /> Duration -</span>
+                            <span className='ms-2'>{duration}</span>
+                        </div>
+                    }
+
+                    {startDate &&
+                        <div className='flex justify-start items-center'>
+                            <span className='font-bold flex items-center'><AiOutlineCalendar size={30} className='me-2' /> Start Date -</span>
+                            <span className='ms-2'>{duration}</span>
+                        </div>
+                    }
+
+                    {batch &&
+                        <div className='flex justify-start items-center'>
+                            <span className='font-bold flex items-center'><LuSchool2 size={30} className='me-2' /> Batch -</span>
+                            <span className='ms-2'>{batch}</span>
+                        </div>
+                    }
+
+                    {experience &&
+                        <div className='flex justify-start items-center'>
+                            <span className='font-bold flex items-center'><MdAutoGraph size={30} className='me-2' /> Experience -</span>
+                            <span className='ms-2'>{experience}</span>
+                        </div>
+                    }
+
+                    <div className='flex'>
+                        <div className='flex gap-2 flex-wrap items-start'>
+
+                            {/* Skills */}
+                            <span className='font-bold flex items-center'><AiOutlineBulb size={30} className='me-2' /> Skills -</span>
+                            <div className='flex w-[100%] gap-6 flex-wrap'>
+                                {
+                                    tags?.map((val, index) => {
+                                        return (
+                                            <span key={index} className='text-gray-600 rounded-md bg-slate-200 dark:border-none dark:bg-gray-600 dark:text-gray-300 px-4 py-1 font-semibold  text-[1rem]'>{val}</span>
+                                        )
+                                    })
+                                }
+                            </div>
+                        </div>
                     </div>
                 </div>
 
