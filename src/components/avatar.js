@@ -3,13 +3,13 @@ import React from 'react'
 
 const Avatar = () => {
   const { user } = useAuth0()
-  
+
   return (
     <div>
       <img
-        className='rounded-full cursor-pointer h-9 md:h-12 dark:bg-white'
+        className='rounded-full cursor-pointer h-9 md:h-12'
         alt='User Icon'
-        src={user?.picture ? user.picture : 'https://cdn.iconscout.com/icon/free/png-256/free-avatar-370-456322.png?f=webp'} />
+        src={user?.picture} />
     </div>
   )
 }
