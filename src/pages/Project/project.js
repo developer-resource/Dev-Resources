@@ -3,26 +3,31 @@ import ProjectCard from '../../components/projectCard'
 import { ProjectContext } from './project-provider'
 
 const Project = () => {
-
     const { pageData } = useContext(ProjectContext)
 
     return (
-        <div className='flex flex-wrap flex-1 px-5 overflow-scroll justify-center pt-3 items-center gap-10'>
-            {pageData?.map((val, index) => {
-                return (
-                    <ProjectCard
-                        key={index}
-                        values={{
-                            thumbnail: val?.thumbnail,
-                            title: val?.title,
-                            keywords: val?.keywords,
-                            description: val?.description
-                        }}
-                    />
-                )
-            })}
+        <div className='flex flex-col gap-10'>
+            {/* Tag Div */}
 
+            {/* Card Div */}
+            <div className='flex flex-wrap gap-8 justify-center  items-center'>
+                {pageData?.map((val, index) => {
+                    const { thumbnail, title, keywords, description } = val
+                    return (
+                        <ProjectCard
+                            key={index}
+                            values={{
+                                thumbnail: thumbnail,
+                                title: title,
+                                keywords: keywords,
+                                description: description
+                            }}
+                        />
+                    )
+                })}
+            </div>
         </div>
+
     )
 }
 
