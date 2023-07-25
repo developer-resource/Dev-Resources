@@ -15,19 +15,11 @@ const Menu = () => {
             {menu
                 ?
                 <div className='absolute left-0 text-white flex flex-col py-4 sm:py-12 bg-[rgba(000,000,000,.87)] w-full p-6 mt-5 rounded'>
-                    {isAuthenticated
-                        ?
-                        <>
-                            <NavLink className={menuClass} to='/'>Home</NavLink>
-                            <NavLink className={menuClass} to='/projects'>Projects</NavLink>
-                            <NavLink className={menuClass} to='/saved'>Saved</NavLink>
-                            <NavLink className={menuClass} to='/chat'>Chat</NavLink>
-
-                            <button className={loginLogoutBtn} onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Logout</button>
-                        </>
-                        :
-                        null
-                    }
+                    <NavLink className={menuClass} to='/'>Home</NavLink>
+                    <NavLink className={menuClass} to='/projects'>Projects</NavLink>
+                    <NavLink className={menuClass} to='/saved'>Saved</NavLink>
+                    <NavLink className={menuClass} to='/chat'>Chat</NavLink>
+                    <button className={loginLogoutBtn} onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Logout</button>
                 </div>
                 : null}
         </div >
