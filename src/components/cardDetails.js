@@ -11,7 +11,7 @@ const CardDetailsComponent = ({ values }) => {
     const {
         batch, companyName, duration, expectedSalary, experience,
         jobDescription, jobTitle, location, portalLink,
-        startDate, tags, type, logo
+        startDate, tags, type, profileImg
     } = values
 
     return (
@@ -21,7 +21,7 @@ const CardDetailsComponent = ({ values }) => {
                 <div className='flex gap-10 items-center flex-col justify-center'>
                     <img
                         className='h-32 rounded w-3h-32 overflow-hidden item object-contain'
-                        src={logo ? logo : 'https://www.freeiconspng.com/thumbs/office-icon/office-icon--insharepics-11.png'} alt='organizationLogo' />
+                        src={profileImg ? profileImg : 'https://www.freeiconspng.com/thumbs/office-icon/office-icon--insharepics-11.png'} alt='organizationLogo' />
                     {/* <p className='text-2xl'>Spenza Pvt Ltd.</p> */}
                     <h1 className='text-7xl font-extrabold text-gray-600 dark:text-gray-200'>{companyName}</h1>
                 </div>

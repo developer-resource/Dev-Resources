@@ -9,7 +9,7 @@ const ProjectProvider = ({ children }) => {
 
     const [state, setState] = useState({
         pageData: [],
-        loading: true
+        loading: true,
     })
 
     useEffect(() => {
@@ -25,7 +25,7 @@ const ProjectProvider = ({ children }) => {
 
     return (
         <ProjectContext.Provider value={{
-            pageData: state?.pageData
+            pageData: state?.pageData,
         }}>
             {state?.loading ? <Loader /> : (state?.pageData.length === 0 ? <BlankPage /> : children)}
         </ProjectContext.Provider>
