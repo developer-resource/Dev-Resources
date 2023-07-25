@@ -15,7 +15,8 @@ const JobCard = ({ values }) => {
         amount,
         logo,
         applyLink,
-        id
+        id,
+        type
     } = values
 
     const navigate = useNavigate()
@@ -43,9 +44,9 @@ const JobCard = ({ values }) => {
             </div>
 
             <div className='flex my-9 flex-wrap justify-between'>
-                <button onClick={() => window.open(applyLink, '_blank')} className='text-white decoration-transparent h-9 mt-2 hover:bg-indigo-700 bg-indigo-600  px-5 py-1 font-semibold  rounded-full text-sm'>Apply Now</button>
+                <button className='text-white decoration-transparent h-9 mt-2 hover:bg-indigo-700 bg-indigo-600  px-5 py-1 font-semibold  rounded-full text-sm'>Apply Now</button>
                 <div>
-                    <p className='text-end text-sm font-bold'>Stipend</p>
+                    <p className='text-end text-sm font-bold'>{type}</p>
                     <p className='text-end'>{amount}</p>
                 </div>
             </div>
@@ -90,7 +91,8 @@ const JobCardWrapper = () => {
                                     amount: val?.expectedSalary,
                                     logo: val?.profileImg,
                                     applyLink: val?.portalLink,
-                                    id: val?._id
+                                    id: val?._id,
+                                    type: val?.type
                                 }}
                             />
                         </>
