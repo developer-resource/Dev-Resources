@@ -14,7 +14,6 @@ const JobCard = ({ values }) => {
         skills,
         amount,
         logo,
-        applyLink,
         id,
         type
     } = values

@@ -1,4 +1,5 @@
 // MessageParser starter code
+/* eslint-disable */
 class MessageParser {
     constructor(actionProvider, state) {
         this.actionProvider = actionProvider;

@@ -8,7 +8,7 @@ const RoadMapCard = ({ title, image, link }) => {
                 <div className="relative max-w-md mx-auto bg-white flex flex-col gap-4 shadow-lg rounded-lg overflow-hidden">
                     <img
                         src={image}
-                        alt="Roadmap Image"
+                        alt="Roadmap"
                         className="h-40 w-full object-cover"
                     />
                     <div className='p-3 text-center'>

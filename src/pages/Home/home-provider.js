@@ -1,7 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react'
 import { fetchHomeData } from '../../api/home-api'
 import Loader from '../../components/loader'
-import BlankPage from '../../components/blankPage'
 import { JobSearch } from '../../api/search-api'
 
 const HomeContext = createContext(null)

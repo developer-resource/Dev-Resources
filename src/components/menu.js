@@ -4,7 +4,7 @@ import { useAuth0 } from '@auth0/auth0-react'
 
 const Menu = () => {
     const [menu, setMenu] = useState(false)
-    const { isAuthenticated, logout } = useAuth0();
+    const { isAuthenticated } = useAuth0();
 
     const menuClass = 'text-white text-xl md:text-2xl my-10 hover:text-teal-500'
 
