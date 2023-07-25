@@ -10,7 +10,7 @@ const Project = () => {
             {/* Tag Div */}
 
             {/* Card Div */}
-            <div className='flex flex-wrap gap-8 justify-center  items-center'>
+            <div className='flex mt-4 flex-wrap gap-8 justify-center  items-center'>
                 {pageData?.map((val, index) => {
                     const { thumbnail, title, keywords, description } = val
                     return (
