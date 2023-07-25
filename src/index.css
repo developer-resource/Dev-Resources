@@ -31,3 +31,18 @@
     background-color: white;
     border-radius: 50px;
   }
+
+
+  .react-chatbot-kit-chat-container {
+    width: 35rem !important;
+    margin: 0 1rem !important;
+}
+
+.react-chatbot-kit-chat-bot-message{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    line-height: 1.5rem;
+    width: 18rem !important;
+    margin-left: unset !important;
+}
