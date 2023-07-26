@@ -22,7 +22,9 @@ const ProjectCard = ({ values }) => {
 
             {/* Button For Start Project */}
             < div className='text-center px-10' >
-                <button className='bg-primary hover:bg-gray-800 dark:bg-gray-700 dark:hover:bg-gray-600 transition-all duration-500 text-white w-full p-2 font-bold rounded-md'>Start Building</button>
+                <button
+                onClick={()=>window.open('https://www.youtube.com/watch?v=9CkpMm-n5iA0', '_blank')}
+                className='bg-primary hover:bg-gray-800 dark:bg-gray-700 dark:hover:bg-gray-600 transition-all duration-500 text-white w-full p-2 font-bold rounded-md'>Start Building</button>
             </div >
         </div >
     )
